@@ -43,7 +43,7 @@ class SimonGame extends Component {
   nextTurn = () => {
     var newSimonElement = Math.floor(Math.random() * 4);
     this.simonArr = [...this.simonArr, newSimonElement]
-    console.log(this.simonArr);
+    // console.log(this.simonArr);
     var i = 0;
     var newinterv = () => {
       if (i < this.simonArr.length) {
@@ -118,8 +118,8 @@ class SimonGame extends Component {
     var calc;
     if (this.state.currAvg[1] !== 0) {
       calc = ((this.state.currAvg[0] * (this.state.currAvg[1] - 1)) + ((now - this.state.prevTime) / 1000)) / this.state.currAvg[1];
-      console.log(calc)
-      console.log("calc: (" + this.state.currAvg[0] + " * " + (this.state.currAvg[1] - 1) + " + " + ((now - this.state.prevTime) / 1000) + ") / " + this.state.currAvg[1] + " = " + calc);
+      // console.log(calc)
+      // console.log("calc: (" + this.state.currAvg[0] + " * " + (this.state.currAvg[1] - 1) + " + " + ((now - this.state.prevTime) / 1000) + ") / " + this.state.currAvg[1] + " = " + calc);
       this.setState({ currAvg: [calc, this.state.currAvg[1] + 1] }, this.setState({ prevTime: now }));
     }
     else {
