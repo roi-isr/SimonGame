@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import firebase from './config/Firebase'
+import {  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+  Redirect,
+  Link, } from "react-router-dom"
+import SimonGame from "./SimonGame"
+import ChooseGame from "./ChooseGame"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super();
+    this.state = { }
+  }
+
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route path="/home"><ChooseGame/></Route>{" "}
+          <Route path="/simon-game"><SimonGame/></Route>{" "}
+          <Route exact path="/">
+            <Redirect to="/home"/>
+          </Route>
+        </Switch>
+      </Router>
+
+    );
+  }
 }
 
 export default App;

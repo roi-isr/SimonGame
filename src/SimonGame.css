@@ -1,0 +1,36 @@
+.firstCircle{
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.secondCircle{
+    width: 200px;
+    height: 200px;
+    border-top-right-radius: 200px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.thirdCircle{
+    width: 200px;
+    height: 200px;
+    border-bottom-left-radius: 200px;
+    margin-right: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.fourthCircle{
+    width: 200px;
+    height: 200px;
+    border-bottom-right-radius: 200px;
+    border: 2px solid black;
+    cursor: pointer;
+} 
+
+.score{
+    line-height: 20px;
+}
