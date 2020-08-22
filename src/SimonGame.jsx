@@ -118,8 +118,8 @@ class SimonGame extends Component {
     var calc;
     if (this.state.currAvg[1] !== 0) {
       calc = ((this.state.currAvg[0] * (this.state.currAvg[1] - 1)) + ((now - this.state.prevTime) / 1000)) / this.state.currAvg[1];
-      // console.log(calc)
-      // console.log("calc: (" + this.state.currAvg[0] + " * " + (this.state.currAvg[1] - 1) + " + " + ((now - this.state.prevTime) / 1000) + ") / " + this.state.currAvg[1] + " = " + calc);
+      console.log(calc)
+      console.log("calc: (" + this.state.currAvg[0] + " * " + (this.state.currAvg[1] - 1) + " + " + ((now - this.state.prevTime) / 1000) + ") / " + this.state.currAvg[1] + " = " + calc);
       this.setState({ currAvg: [calc, this.state.currAvg[1] + 1] }, this.setState({ prevTime: now }));
     }
     else {
@@ -136,7 +136,7 @@ class SimonGame extends Component {
         this.setState({ blueCir: "blue", yellowCir: "yellow", redCir: "red", greenCir: "green" });
       }
       else {
-        // console.log(Math.floor((this.state.score + 1) * (50 / (calc + 1))) + " , " + (100000 / this.intervalLevel))
+        console.log(Math.floor((this.state.score + 1) * (50 / (calc + 1))) + " , " + (100000 / this.intervalLevel))
         if (Math.floor((this.state.score + 1) * (this.secM / (calc + 1))) >= (100000 / this.intervalLevel)) {
           this.intervalLevel /= this.firstM;
           this.currLevel = this.intervalLevel;
